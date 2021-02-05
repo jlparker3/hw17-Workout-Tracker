@@ -47,5 +47,20 @@ router.put("/api/workouts/:id", (req, res) => {
 
 })
 
+
+//getting the chart data for the dashboard
+router.get("/api/workouts/range", (req,res) => {
+    Workout.find({})
+    .then(dbWorkout => {
+        console.log(dbWorkout);
+        res.json(dbWorkout);
+    })
+        .catch(err => {
+            // If an error occurs, send the error to the client
+            res.json(err);
+        })
+})
+
+
 module.exports = router;
 

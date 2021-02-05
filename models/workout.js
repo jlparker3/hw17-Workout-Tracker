@@ -39,6 +39,19 @@ const workoutDB = new Schema({
 
         }
     ]
+
+    //Virtuals for adding total duration of workout
+    //docs for virtual  https://mongoosejs.com/docs/tutorials/virtuals.html#virtuals-in-json
+}, { toJSON: { virtuals: true } });
+
+
+// total workout duration use mongoose docs
+workoutDB.virtual("totalDuration").get(function () {
+    //using reduce to flatten the total durations to one value
+    // docs for reduce https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+    return this.exercises.reduce((total, exercise) => {
+        return total + exercise.duration;
+    }, 0);
 })
 
 const Workout = mongoose.model("Workout", workoutDB);
