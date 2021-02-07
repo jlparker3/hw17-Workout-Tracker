@@ -6,7 +6,9 @@ hw 17 usage of mongoose and mongoDB
 https://workout-tracker5.herokuapp.com/
 
 # Screenshot of working app
+<img width="1440" alt="Screen Shot 2021-02-07 at 3 39 25 PM" src="https://user-images.githubusercontent.com/68556793/107160245-bdf73500-695a-11eb-9fc3-786f5015a2ec.png">
 
+<img width="1440" alt="Screen Shot 2021-02-07 at 3 39 18 PM" src="https://user-images.githubusercontent.com/68556793/107160246-bfc0f880-695a-11eb-9160-60e6337da842.png">
 
 # Purpose of app
 The purpose of this application is to keep track of daily workout and with the dashboard feature the user will be provided with graphs of their progess.
